@@ -89,8 +89,8 @@ app.use((req,res,next)=>{
 app.use("/", authRoutes);
 app.use("/", clientRoutes);
 app.use("/", galleryRouter);
-app.use("/", adminRoutes);
-app.use("/", contactRoute);
+app.use("/admin", adminRoutes);
+
 
 
 

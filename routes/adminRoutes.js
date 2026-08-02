@@ -9,7 +9,7 @@ const Contact = require("../models/contact");
 const Developer = require("../models/developer");
 
 router.use((req, res, next) => {
-  console.log("ADMIN ROUTE ACTIVE:", req.originalUrl);
+  console.log("ADMIN ROUTE ACTIVE:",  req.path);
   next();
 });
 
@@ -25,7 +25,7 @@ const validPages = [
 ];
 
 // GET ALL CONTACTS
-router.get("/admin/contacts", isLoggedIn, wrapAsync(async (req, res) => {
+router.get("/contacts", isLoggedIn, wrapAsync(async (req, res) => {
 
   const contacts = await Contact.find().sort({ createdAt: -1 });
 
@@ -34,7 +34,7 @@ router.get("/admin/contacts", isLoggedIn, wrapAsync(async (req, res) => {
 }));
 
 // DELETE CONTACT
-router.delete("/admin/contact/delete/:id", isLoggedIn, wrapAsync(async (req, res) => {
+router.delete("contact/delete/:id", isLoggedIn, wrapAsync(async (req, res) => {
 
   const { id } = req.params;
 
@@ -49,19 +49,19 @@ router.delete("/admin/contact/delete/:id", isLoggedIn, wrapAsync(async (req, res
 // DEVELOPER ROUTES
 
 // show developer page
-router.get("/admin/developer", isLoggedIn, wrapAsync(async (req, res) => {
+router.get("/developer", isLoggedIn, wrapAsync(async (req, res) => {
   const developers = await Developer.find();
   res.render("admin/developer.ejs", { developers });
 }));
 
 // ADD FORM PAGE (🔥 YOU MISSED THIS)
-router.get("/admin/developer/add", isLoggedIn, (req, res) => {
+router.get("/developer/add", isLoggedIn, (req, res) => {
   res.render("admin/addDeveloper.ejs");
 });
 
 // SAVE
 router.post(
-  "/admin/developer",
+  "/developer",
   isLoggedIn,
   upload.single("image"),   // 👈 important
   wrapAsync(async (req, res) => {
@@ -96,14 +96,14 @@ router.post(
 );
 
 // EDIT FORM
-router.get("/admin/developer/edit/:id", isLoggedIn, wrapAsync(async (req, res) => {
+router.get("/developer/edit/:id", isLoggedIn, wrapAsync(async (req, res) => {
   const dev = await Developer.findById(req.params.id);
   res.render("admin/editDeveloper.ejs", { dev });
 }));
 
 // UPDATE
 router.put(
-  "/admin/developer/edit/:id",
+  "/developer/edit/:id",
   isLoggedIn,
   upload.single("image"),
   wrapAsync(async (req, res) => {
@@ -143,7 +143,7 @@ router.put(
 );;
 
 // DELETE
-router.delete("/admin/developer/delete/:id", isLoggedIn, wrapAsync(async (req, res) => {
+router.delete("/developer/delete/:id", isLoggedIn, wrapAsync(async (req, res) => {
 
   const dev = await Developer.findById(req.params.id);
 
@@ -162,7 +162,7 @@ router.delete("/admin/developer/delete/:id", isLoggedIn, wrapAsync(async (req, r
 
 //  SHOW ADMIN PAGE
 
-router.get("/admin/:page", isLoggedIn, wrapAsync(async (req, res) => {
+router.get("/:page", isLoggedIn, wrapAsync(async (req, res) => {
 
   const page = req.params.page;
  
@@ -181,7 +181,7 @@ router.get("/admin/:page", isLoggedIn, wrapAsync(async (req, res) => {
 }));
 
 // OPEN ADD FORM
-router.get("/admin/add-section/:page", isLoggedIn, (req, res) => {
+router.get("/add-section/:page", isLoggedIn, (req, res) => {
   const page = req.params.page;
             
   res.render("admin/addSection.ejs", { page });
@@ -189,7 +189,7 @@ router.get("/admin/add-section/:page", isLoggedIn, (req, res) => {
 
 
 // SAVE DATA
-router.post("/admin/add-section/:page", isLoggedIn, upload.array("media", 30), wrapAsync(async (req, res) => {
+router.post("/add-section/:page", isLoggedIn, upload.array("media", 30), wrapAsync(async (req, res) => {
 
   const page = req.params.page;
   let section = req.body.section;
@@ -252,7 +252,7 @@ router.post("/admin/add-section/:page", isLoggedIn, upload.array("media", 30), w
 
 // show edit form
 
-router.get("/admin/edit/:id", isLoggedIn, wrapAsync(async (req, res) => {
+router.get("/edit/:id", isLoggedIn, wrapAsync(async (req, res) => {
 
   const { id } = req.params;
 
@@ -271,7 +271,7 @@ router.get("/admin/edit/:id", isLoggedIn, wrapAsync(async (req, res) => {
 // update data
 
 router.put(
-  "/admin/edit/:id",
+  "/edit/:id",
   isLoggedIn,
   upload.array("media", 30),
   wrapAsync(async (req, res) => {
@@ -321,7 +321,7 @@ router.put(
 
 // media delete route
 router.delete(
-  "/admin/delete-media/:id/:index",
+  "/delete-media/:id/:index",
   isLoggedIn,
   wrapAsync(async (req, res) => {
 
@@ -353,7 +353,7 @@ router.delete(
 // delete section 
 
 router.delete(
-  "/admin/delete-section/:id",
+  "/delete-section/:id",
   isLoggedIn,
   wrapAsync(async (req, res) => {
 
