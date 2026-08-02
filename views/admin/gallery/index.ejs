@@ -1,0 +1,53 @@
+<% layout('layout/admin') %>
+
+<a href="/admin/gallery/addImage">
+    <button>Add Gallery</button>
+</a>
+
+<% if (gallery.length === 0) { %>
+
+    <p>No data found</p>
+
+<% } %>
+
+<% gallery.forEach(img => { %>
+
+    <div style="border:1px solid #ccc;padding:15px;margin:15px 0; display: flex; column-gap: 10px; flex-wrap: wrap;" >
+
+        <p><strong>Category:</strong> <%= img.category %></p>
+        <p><%=img.title %></p>
+        <p><%=img.discription %></p>
+    
+        <% if (img.image && img.image.length > 0) {%>
+
+            <% img.image.forEach((file, index) => { %>
+            
+                <% if(file.type=="image") { %>
+                    <img src="<%= file.url%>" width="200" height="100" >
+                <% } else { %>
+                    <video src="<%= file.url%>" controls width="200"></video>
+                <% } %>
+
+                    <form
+                        action="/admin/gallery/delete-image/<%= img._id %>/<%= index %>?_method=DELETE"
+                        method="POST"
+                        onsubmit="return confirm('Delete this image?')">
+
+                            <button style="color:red"> Delete</button>
+
+                    </form>
+            
+            <% }) %>
+
+        <% } %>
+
+        <br><br>
+
+        <a style="display: flex;" href="/admin/gallery/edit/<%=img._id %>">
+            <button >Edit</button>
+        </a>
+
+    
+    </div>
+
+<% }) %>

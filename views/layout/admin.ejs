@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Panel</title>
+  <link rel="stylesheet" href="/css/admin.css">
+</head>
+
+<body>
+
+<div class="admin-container">
+
+  <!-- 🔹 SIDEBAR -->
+  <div class="sidebar">
+    <h2>Admin</h2>
+
+    <ul>
+      <li><a href="/admin/home">Home</a></li>
+      <li><a href="/admin/about">About</a></li>
+      <li><a href="/admin/facilities">Facilities</a></li>
+      <li><a href="/admin/events">Events</a></li>
+      <li><a href="/admin/committees">Committees</a></li>
+      <li><a href="/admin/mess">Mess Menu</a></li>
+      <li><a href="/admin/notices">Notices</a></li>
+      <li><a href="/admin/contacts">Contacts</a></li>
+      <li><a href="/admin/employees">Employees</a></li>
+      <li><a href="/admin/developer">Developer</a></li>
+      <li><a href="/admin/gallery">Gallery</a></li>
+    </ul>
+  </div>
+
+  <!-- 🔹 MAIN CONTENT -->
+  <div class="main-content">
+    <%- include("../include/errorflash.ejs") %>
+    <%- body %>
+
+    
+  </div>
+
+</div>
+
+
+<script>
+setTimeout(() => {
+  const flash = document.querySelector(".flash");
+  if (flash) {
+    flash.style.opacity = "0";
+    setTimeout(() => {
+      flash.style.display = "none";
+    }, 500);
+  }
+}, 3000);
+</script>
+</body>
+</html>

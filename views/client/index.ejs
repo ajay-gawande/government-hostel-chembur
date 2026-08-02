@@ -1,0 +1,546 @@
+<% layout("/layout/boilerplate.ejs") %>
+
+<section class="hero-section"
+  style="background-image: url('<%= hero && hero.media.length ? hero.media[0].url : "" %>');">
+
+  <div class="container hero-section-text">
+    <div class="col-12">
+      <div class="text-container">
+
+        <h4 class="heading">
+          <%= hero.title %>
+        </h4>
+
+        <hr>
+
+        <p class="sub-heading text-1 mt-2">
+          <%= hero.subtitle %>
+        </p>
+
+        <p class="sub-heading text-2 mt-1" >
+          <%= hero.description %>
+        </p>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- legend section -->
+
+<section class="legend-section d-flex justify-content-center">
+  <div class="container">
+    <div class="legend">
+
+      <div class="legend-card br-ambedkar">
+        <img src="https://res.cloudinary.com/dmtdl93vz/image/upload/f_auto,q_auto,w_1200/v1785687356/leg-babasaheb-img_f3y9ip.png" alt="Babasaheb Ambedkar Government Hostel Chembur babasaheb image" loading="lazy">
+        <div class="leg-thought-div ">
+          <p class="heading"><b>शिका, संघटित व्हा, संघर्ष करा.</b></p>
+          <p class="legend-name">— डॉ. बाबासाहेब आंबेडकर</p>
+        </div>
+      </div>
+
+      <div class="legend-card jotiba-fule">
+        <img src="https://res.cloudinary.com/dmtdl93vz/image/upload/f_auto,q_auto,w_1200/v1785687366/leg-jotiba-phule-img_suckuu.png" alt="Babasaheb Ambedkar Government Hostel Chembur jotiba fule image" loading="lazy">
+        <div class="leg-thought-div ">
+          <p class="heading"><b>विद्या हीच खरी शक्ती आहे.</b></p>
+          <p class="legend-name">— महात्मा फुले</p>
+        </div>
+      </div>
+
+      <div class="legend-card shahu-maharaj">
+        <img src="https://res.cloudinary.com/dmtdl93vz/image/upload/f_auto,q_auto,w_1200/v1785687367/leg-shahu-maharaj-img_wg1oss.png" alt="Babasaheb Ambedkar Government Hostel Chembur shahu maharaj image" loading="lazy">
+        <div class="leg-thought-div ">
+          <p class="heading"><b>समता समाजाची खरी ताकद आहे.</b></p>
+          <p class="legend-name">— शाहू महाराज</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- about section -->
+<section class="about-section d-flex justify-content-center">
+<div class="container ">
+  <div class="row d-flex justify-content-center g-4">
+        <!-- Left side -->
+        <div class="col-md-7 col-12 about-left l-shape-box">
+
+            <h2 class="about-title"><%=about.title%></h2>
+            <p class="about-text mt-2"><%=about.description%></p>
+        
+            
+            <a href="/about-government-hostel-chembur" class="about-btn mt-3">Read more</a>
+        </div>
+        
+        <!-- right side -->
+        <div class="col-md-5 col-12 about-right">
+            
+            <img src="<%=about.media[0].url.replace('/upload/', '/upload/f_auto,q_auto,w_800/')%>" alt="Government Hostel Chembur students studying in library" class="about-img" loading="lazy">
+        </div>
+  </div>
+
+</div>
+
+</section>
+
+
+
+<!-- facilities section -->
+
+<section class="facilities-section d-flex justify-content-center">
+
+  <div class="container ">
+
+    <!-- HEADING -->
+    <div class="section-heading text-center">
+      <h2 >सुविधा</h2>
+      <p class="section-subtext mb-3 ">
+        विद्यार्थ्यांच्या उत्तम राहणीमान आणि अभ्यासासाठी आवश्यक सुविधा
+      </p>
+    </div>
+
+    <!-- CARDS -->
+    <div class="row text-center">
+
+      <div class="col-md-4 col-6 mb-4">
+        <div class="facility-card">
+          <i class="fas fa-bed facility-icon"></i>
+          <h5>आरामदायी खोल्या</h5>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-6 mb-4">
+        <div class="facility-card">
+          <i class="fas fa-utensils facility-icon"></i>
+          <h5>भोजन व्यवस्था</h5>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-6 mb-4">
+        <div class="facility-card">
+          <i class="fas fa-book facility-icon"></i>
+          <h5>अभ्यासिका</h5>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-6 mb-4">
+        <div class="facility-card">
+          <i class="fas fa-wifi facility-icon"></i>
+          <h5>वाय-फाय सुविधा</h5>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-6 mb-4">
+        <div class="facility-card">
+          <i class="fas fa-shower facility-icon"></i>
+          <h5>स्वच्छ पाणी व स्नानगृह</h5>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-6 mb-4">
+        <div class="facility-card">
+          <i class="fas fa-shield-alt facility-icon"></i>
+          <h5>सुरक्षा व्यवस्था</h5>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- BUTTON -->
+    <div class="text-center mt-3">
+      <a href="/hostel-facilities" class="facility-btn">View All Facilities</a>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- hotel life section -->
+<section class="hostel-life  d-flex justify-content-center">
+  <div class="container">
+    
+    <!-- Heading -->
+    <div class="text-center ">
+      
+      <h2 class="section-title"><%= hostelLife.title %></h2>
+      <p class="section-subtitle mb-3">
+       <%= hostelLife.subtitle %>
+      </p>
+    </div>
+
+    <div class="row align-items-center">
+
+      <!-- LEFT CONTENT -->
+      <div class="col-md-6">
+        <div class="left-content">
+
+          <div class="left-item">
+            <span><i class="fas fa-book-open"></i></span>
+            <p>शांत आणि अभ्यासासाठी योग्य वातावरण  </p>
+          </div>
+
+          <div class="left-item">
+            <span><i class="fas fa-users"></i></span>
+            <p>मदत करणारा आणि शिस्तबद्ध विद्यार्थी समूह</p>
+          </div>
+
+          <div class="left-item">
+            <span><i class="fas fa-utensils"></i></span>
+            <p>स्वच्छ व पौष्टिक आहार व्यवस्था</p>
+          </div>
+
+          <div class="left-item">
+            <span><i class="fas fa-bed"></i></span>
+            <p>सुरक्षित आणि सुव्यवस्थित निवास सुविधा  </p>
+          </div>
+
+          <div class="left-item">
+            <span><i class="fas fa-bullseye"></i></span>
+            <p>विद्यार्थ्यांना त्यांच्या ध्येयासाठी प्रोत्साहन देणारे वातावरण</p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- RIGHT IMAGE SLIDER -->
+      <div class="col-md-6">
+        <% if(hostelLife && hostelLife.media.length > 0) { %>
+
+          <div class="right-slider">
+            <div class="right-caption">
+              शिक्षण, शिस्त आणि एकतेद्वारे विद्यार्थ्यांचा विकास
+            </div>
+            <img id="lifeImage" src="<%= hostelLife.media[0].url.replace('/upload/', '/upload/f_auto,q_auto,w_800/') %>" alt="Government Hostel Chembur students Hostel Life" loading="lazy">
+          </div>
+
+          <!-- Pass all images to JS -->
+          <div id="right-data" 
+              data-images='<%- JSON.stringify(hostelLife.media) %>'>
+          </div>
+        <% } %>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- college slider section -->
+
+<section class="college-section  d-flex justify-content-center">
+  <div class="container">
+
+    <div class="college-heading">
+      <h3><%=collegeSection.title%></h3>
+    </div>
+
+    <div class="college-slider">
+      <div class="college-track" id="track">
+        <% if(collegeSection && collegeSection.media) { %>
+
+          <%collegeSection.media.forEach(item => { %>
+              <div class="college-card">
+                <img src="<%=item.url.replace('/upload/', '/upload/f_auto,q_auto,w_800/')%>" alt="Government Hostel Chembur stundent come for ranking colleges" loading="lazy">
+              </div>
+          <% }); %>
+  
+       <% } %>
+          
+      </div>
+    </div>
+
+    <div class="stream-heading">
+      <h3>Across All Streams</h3>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- collage stream section -->
+
+<section class="college-stream  d-flex justify-content-center">
+  <div class="container">
+    <div class="row d-flex justify-content-center">
+      <div class="stream-container col-md-8">
+
+        <div class="stream-slider">
+          <div class="stream-track" id="streamTrack">
+
+            <% if(collegeStrem && collegeStrem.media ) { %>
+              <% collegeStrem.media.forEach(item => { %>
+                <div class="stream-card">
+                  <div class="card-box">
+                    <img src="<%=item.url.replace('/upload/', '/upload/f_auto,q_auto,w_800/')%>" alt="Government Hostel Chembur students from diffrent stream " loading="lazy">
+                    <h5><%=item.filename%></h5>
+                  </div>
+                </div>
+              <% }) %>
+            <% } %>
+          
+
+          </div>
+        </div>
+
+        <!-- DOTS -->
+        <div class="stream-dots mt-4" id="streamDots"></div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- student gallery -->
+<!-- student images section -->
+
+<section class="student-gallery d-flex justify-content-center">
+
+  <div class="container">
+    <div class="row align-items-center">
+
+      <!-- LEFT TEXT -->
+      <div class="col-md-5 mb-2">
+         
+        <div class="gallery-card">
+          <h2 class="gallery-title">
+              <% let title = studentGallery.title.split(" "); %>
+            <span class="bold-blue"><%=title.slice(0, 2).join(" ") %></span> 
+            <span class="bold-black"><%=title[2]%></span><br>
+            <span class="bold-black"><%=title.slice(3).join(" ")%></span>
+          </h2>
+          <p class="gallery-text mt-4">
+           <%=studentGallery.description%>
+          </p>
+
+        </div>
+      </div>
+         
+      <!-- RIGHT IMAGES -->
+      <div class="col-md-7">
+        <div class="image-grid">
+         
+          <img  class="img-box img1" loading="lazy">
+          <img  class="img-box img2" loading="lazy">
+          <img  class="img-box img3" loading="lazy">
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</section>
+
+
+
+
+
+
+
+
+<!-- EVENT SECTION -->
+<section class="events-section d-flex justify-content-center">
+  <div class="container">
+
+    <!-- HEADING -->
+    <div class="events-heading text-center">
+      <h2>कार्यक्रम व उपक्रम</h2>
+      <p class="section-subtext mb-3">उत्सव, कार्यक्रम आणि विद्यार्थी जीवनाचा आनंद</p>
+    </div>
+
+    <!-- SLIDER -->
+    <div class="event-slider">
+
+        <!-- LEFT BUTTON -->
+      <button class="event-btn prev" id="prevBtn">&#10094;</button>
+          <div class="event-track" id="eventTrack">
+
+            <!-- Card 1 -->
+            <div class="event-card">
+                <div class="event-card-inner">
+                    <div class="event-media">
+                        <video controls preload="metadata" id="eventVideo">
+                            <source src="https://res.cloudinary.com/dmtdl93vz/video/upload/f_auto,q_auto,w_1200/v1785396911/AQPrE607lKqo6lb2i0S0VisG0zsaKIgJohhanuSZ2m4-9LUgeHsveC79Dl-CnO4J5M-nF4IORXeEvDeRSGcQy4nQc0_zPmDsMS-BZV0_bmrbyd.mp4" type="video/mp4">
+                        </video>
+                    </div>
+
+                    <div class="event-content">
+                        <span class="event-date">१४ एप्रिल २०२६</span>
+                        <h5>डॉ. बाबासाहेब आंबेडकर १३५ वी जयंती महोत्सव</h5>
+                        <p>त्यांच्या विचारांना वंदन करत विविध कार्यक्रम आणि उपक्रमांद्वारे जयंती साजरी.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="event-card">
+                <div class="event-card-inner">
+                    <div class="event-media">
+                        <img src="https://res.cloudinary.com/dmtdl93vz/image/upload/f_auto,q_auto,w_1200/v1775237955/hostel/o0urc0jdssfk05xei0al.jpg" alt="Government Hostel Chembur  धम्मचक्र प्रवर्तन दिन" loading="lazy">
+                    </div>
+
+                    <div class="event-content">
+                        <span class="event-date">१४ ऑक्टोबर २०२६</span>
+                        <h5>धम्मचक्र प्रवर्तन दिन</h5>
+                        <p class="">बुद्धाच्या धम्ममार्गाने समानता, करुणा आणि स्वाभिमानाचा संदेश.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+
+              <div class="event-card">
+                <div class="event-card-inner">
+                    <div class="event-media">
+                        <video controls preload="metadata" id="eventVideo">
+                            <source src="https://res.cloudinary.com/dmtdl93vz/video/upload/f_auto,q_auto,w_1200/v1785396931/AQMOuwnCH0BdSFTVhcCxITQbZfJfjIT_XRIFMchyMppnfQyZaqkMrmJ-r13XMq4D8xYsrd7MZXEnSXkCVmJUYguGUV7CUdUSScT4zBw_gzbjve.mp4" type="video/mp4">
+                        </video>
+                    </div>
+
+                    <div class="event-content">
+                        <span class="event-date">अंतरगृह क्रीडा स्पर्धा</span>
+                        <h5>विद्यार्थी क्रीडा महोत्सव</h5>
+                        <p>विद्यार्थ्यांच्या उत्साह, क्रीडाभावना आणि संघभावनेची रोमांचक झलक.</p>
+                    </div>
+                </div>
+            </div>
+            
+
+            <!-- Card 4 -->
+          <div class="event-card">
+                <div class="event-card-inner">
+                    <div class="event-media">
+                        <img src="https://res.cloudinary.com/dmtdl93vz/image/upload/f_auto,q_auto,w_1200/v1775237796/hostel/vnoq5ci5rwwng04suurt.jpg" alt="Government Hostel Chembur संविधान दिन" loading="lazy">
+                    </div>
+
+                    <div class="event-content">
+                        <span class="event-date">२६ नोव्हेंबर २०२६</span>
+                        <h5>संविधान दिन</h5>
+                        <p>भारतीय संविधानाच्या मूल्यांचा सन्मान आणि जनजागृतीचा प्रेरणादायी दिवस.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+      <!-- RIGHT BUTTON -->
+      <button class="event-btn next" id="nextBtn">&#10095;</button>
+    </div>
+
+    <!-- DOTS -->
+    <div class="event-dots" id="eventDots"></div>
+
+  </div>
+</section>
+
+
+
+<!-- hostel gallery -->
+<section class="hostel-gallery">
+  <div class="container">
+
+    <!-- Heading -->
+    <div class="gallery-header">
+      <h2 class="heading"><%= galleryImages.title %></h2>
+      <p><%= galleryImages.subtitle %></p>
+    </div>
+
+    <!-- Grid -->
+    <div class="home-gallery-grid">
+      <% if (galleryImages && galleryImages.media.length > 0) { %>
+
+        <% galleryImages.media.slice(0,9).forEach((img, i) => { %>
+          <div class="home-gallery-item">
+
+            <img src="<%= img.url.replace('/upload/', '/upload/f_auto,q_auto,w_800/') %>" alt="Government Hostel Chembur Hostel Image" loading="lazy">
+
+          </div>
+        <% }) %>
+
+      <% } %>
+    </div>
+
+    <!-- Button -->
+    <div class="gallery-btn">
+      <a href="/hostel-gallery" class="explore-btn">
+        Explore Gallery 
+      </a>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- map and contact form section -->
+
+<section class="contact-map-section d-flex justify-content-center">
+  <div class="container">
+    <div class="row align-items-stretch">
+
+      <!-- LEFT -->
+      <div class="col-md-6 mb-4">
+        <div class="contact-form-box">
+          <h3>संपर्क करा</h3>
+          <p class="form-subtitle">आपल्याला काही माहिती हवी असल्यास खालील फॉर्म भरून आम्हाला संपर्क करा.</p>
+
+          <form action="/hostel-contact" method="POST">
+            <div class="form-group">
+              <input type="text" name="name" placeholder="Your Name" required>
+            </div>
+
+            <div class="form-group">
+              <input type="email" name="email" placeholder="Your Email" required>
+            </div>
+
+            <div class="form-group">
+              <input type="text" name="subject" placeholder="Subject">
+            </div>
+
+            <div class="form-group">
+              <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+            </div>
+
+            <button type="submit" class="btn-submit">Send Message</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- RIGHT -->
+      <div class="col-md-6 mb-4">
+        <div class="map-box">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.157003124842!2d72.89158047580602!3d19.0568334525728!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c9006a7741af%3A0x7c5f3b2e4606616!2sDr.%20Babasaheb%20Ambedkar%20Boys%20Government%20Hostel!5e0!3m2!1sen!2sin!4v1775245469311!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+ <!-- PASS DB IMAGES TO JS -->
+
+ <!-- student gallery section data -->
+<div id="gallery-data"
+   data-images='<%- JSON.stringify(studentGallery.media.map(img => img.url || img)) %>'>
+</div>
+
+
+<script src="/js/studentGallery.js"></script>
+<script src="/js/collegeSlider.js"></script>
+<script src="/js/stramSlider.js"></script>
+<script src="/js/eventslider.js"></script>
+
+<script>
+const video = document.getElementById("eventVideo");
+
+video.addEventListener("loadedmetadata", () => {
+    video.currentTime = 1; // Start at 1 second
+});
+</script>

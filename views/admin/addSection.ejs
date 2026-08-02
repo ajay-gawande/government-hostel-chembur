@@ -1,0 +1,70 @@
+<% layout('layout/admin') %>
+
+<h2>Add Section (<%= page %>)</h2>
+
+<form action="/admin/add-section/<%= page %>" method="POST" enctype="multipart/form-data">
+
+  <!-- SECTION TYPE -->
+ <select name="section" id="sectionSelect" required>
+  <option value="">Select Section</option>
+  <option value="hero">Hero</option>
+  <option value="about">About</option>
+  <option value="gallery">Gallery</option>
+  <option value="events">Events</option>
+  <option value="college">College</option>
+  <option value="other">Other</option>
+</select>
+
+<input type="text" name="customSection" id="customSection" placeholder="Enter custom section" style="display:none;">
+
+  <br><br>
+
+  <input type="text" name="title" placeholder="Title">
+  <br><br>
+  
+
+  <input type="text" name="subtitle" placeholder="Subtitle">
+  <br><br>
+
+  <textarea name="description" placeholder="Description"></textarea>
+  <br><br>
+
+  <textarea name="bold1" placeholder="bold content"></textarea>
+  <br><br>
+
+  <textarea name="bold2" placeholder="bold content"></textarea>
+  <br><br>
+
+  <textarea name="para1" placeholder="para1"></textarea>
+  <br><br>
+  
+  <textarea name="para2" placeholder="para2"></textarea>
+  <br><br>
+  
+  <textarea name="para3" placeholder="para3"></textarea>
+  <br><br>
+  
+  <textarea name="para4" placeholder="para4"></textarea>
+  <br><br>
+
+  <input type="text" name="flag" placeholder="flag">
+  <br><br>
+
+  <input type="file" name="media" multiple>
+  <br><br>
+
+  <button type="submit">Add Section</button>
+</form>
+
+<script>
+const select = document.getElementById("sectionSelect");
+const custom = document.getElementById("customSection");
+
+select.addEventListener("change", () => {
+  if (select.value === "other") {
+    custom.style.display = "block";
+  } else {
+    custom.style.display = "none";
+  }
+});
+</script>

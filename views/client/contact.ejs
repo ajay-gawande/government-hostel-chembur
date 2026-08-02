@@ -1,0 +1,196 @@
+<% layout("/layout/boilerplate.ejs") %>
+
+<!-- CONTACT HERO -->
+<section class="contact-hero" 
+  style="background-image: url('https://res.cloudinary.com/dmtdl93vz/image/upload/f_auto,q_auto,w_800/v1775419275/hostel/jyzyd5skwqqkdhv5qlbs.jpg');">
+
+  <div class="container">
+    <div class="col-12 contact-hero-container">
+
+      <div class="contact-text-container">
+        <h4 class="heading">
+          संपर्क करा
+        </h4>
+        <p class="sub-text">
+          तुमचे प्रश्न, सूचना किंवा मदतीसाठी आम्ही नेहमी उपलब्ध आहोत
+        </p>
+      </div>  
+
+    </div>
+  </div>
+
+</section>
+
+
+<!--  CONTACT INFO -->
+<section class="contact-info-alt section">
+  <div class="container">
+
+    <div class="contact-card-alt">
+
+      <!-- Item -->
+      <div class="contact-row-alt">
+        <i class="fa-solid fa-location-dot"></i>
+        <div>
+          <h4>पत्ता</h4>
+          <p>
+            भारत रत्न डॉ. बाबासाहेब आंबेडकर मुलांचे शासकीय वसतिगृह युनिट १, २, ३ व संत एकनाथ मागासवर्गीय मुलांचे वसतिगृह चेंबूर, मुंबई – ४०००७१
+          </p>
+        </div>
+      </div>
+
+      <!-- Item -->
+      <div class="contact-row-alt">
+        <i class="fa-solid fa-phone"></i>
+        <div>
+          <h4>फोन नंबर</h4>
+          <p>
+            <a href="tel:+919922592844">+91 992259 2844</a>
+          </p>
+        </div>
+      </div>
+
+      <!-- Item -->
+      <div class="contact-row-alt">
+        <i class="fa-solid fa-envelope"></i>
+        <div>
+          <h4>ईमेल</h4>
+          <p>
+           <a href="mailto:unit1hostel.chembur@gmail.com">
+              unit1hostel.chembur@gmail.com
+          </a>
+          </p>
+        </div>
+      </div>
+
+      <!-- Item -->
+      <div class="contact-row-alt">
+        <i class="fa-regular fa-clock"></i>
+        <div>
+          <h4>कार्यालय वेळ</h4>
+          <p>10:00 AM – 6:00 PM</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- map and contact form section -->
+
+<section class="contact-map-section d-flex justify-content-center">
+  <div class="container">
+    <div class="row align-items-stretch">
+
+      <!-- LEFT -->
+      <div class="col-md-6 mb-4">
+        <div class="contact-form-box">
+          <h3>संपर्क करा</h3>
+          <p class="form-subtitle">आपल्याला काही माहिती हवी असल्यास खालील फॉर्म भरून आम्हाला संपर्क करा.</p>
+
+          <form action="/hostel-contact" method="POST">
+            <div class="form-group">
+              <input type="text" name="name" placeholder="Your Name" required>
+            </div>
+
+            <div class="form-group">
+              <input type="email" name="email" placeholder="Your Email" required>
+            </div>
+
+            <div class="form-group">
+              <input type="text" name="subject" placeholder="Subject">
+            </div>
+
+            <div class="form-group">
+              <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+            </div>
+
+            <button type="submit" class="btn-submit">Send Message</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- RIGHT -->
+      <div class="col-md-6 mb-4">
+        <div class="map-box">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.157003124842!2d72.89158047580602!3d19.0568334525728!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c9006a7741af%3A0x7c5f3b2e4606616!2sDr.%20Babasaheb%20Ambedkar%20Boys%20Government%20Hostel!5e0!3m2!1sen!2sin!4v1775245469311!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<!-- IMPORTANT CONTACTS -->
+<section class="important-contacts section">
+  <div class="container">
+
+    <div class="important-contacts-header">
+      <h2>महत्त्वाचे संपर्क</h2>
+      <p>वसतिगृह प्रशासन व सहाय्यक कर्मचाऱ्यांचे अधिकृत संपर्क तपशील</p>
+    </div>
+
+    <div class="staff-list">
+
+      <!-- गृहप्रमुख -->
+      <div class="staff-row">
+        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135789.png" alt=" dr babasaheb ambedkar hostel chembur गृहप्रमुख" loading="lazy">
+        
+
+        <div class="staff-info">
+          <h4>सौ. राजेश्वरी साखरे</h4>
+          <span>गृहप्रमुख</span>
+        </div>
+
+        <div class="staff-contact">
+          <span>मोबाईल उपलब्ध नाही</span>
+        </div>
+      </div>
+
+      <!-- गृहपाल -->
+      <div class="staff-row">
+        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt=" dr babasaheb ambedkar hostel chembur गृहपाल" loading="lazy">
+        <div class="staff-info">
+          <h4>श्री. कुंदन कोडावटे</h4>
+          <span>गृहपाल</span>
+        </div>
+
+        <div class="staff-contact">
+          <a href="tel:+919922592844">+91 99225 92844</a>
+        </div>
+      </div>
+
+      <!-- Office -->
+      <div class="staff-row">
+       <img src="https://res.cloudinary.com/dmtdl93vz/image/upload/f_auto,q_auto,w_800/v1785605466/department_lrmvyu.png" alt=" dr babasaheb ambedkar hostel chembur Office Department" loading="lazy">
+
+        <div class="staff-info">
+          <h4>कार्यालय विभाग</h4>
+          <span>Office Department</span>
+        </div>
+
+        <div class="staff-contact">
+          <span>मोबाईल उपलब्ध नाही</span>
+        </div>
+      </div>
+
+      <!-- Security -->
+      <div class="staff-row emergency">
+        <img src="https://res.cloudinary.com/dmtdl93vz/image/upload/f_auto,q_auto,w_800/v1785605415/policeman_ya6paz.png" alt="dr babasaheb ambedkar hostel chembur Security Guard" loading="lazy">
+        <div class="staff-info">
+          <h4>रोशन यादव</h4>
+          <span>सुरक्षा रक्षक (Security Guard)</span>
+        </div>
+
+        <div class="staff-contact">
+          <a href="tel:+917667464541">+91 76674 64541</a>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>

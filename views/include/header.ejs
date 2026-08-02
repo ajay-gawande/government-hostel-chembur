@@ -1,0 +1,107 @@
+<header>
+    <section class="main-header first-hd ">
+        <div class="container">
+            <div class="row header">
+                <div class="col-12">
+                    <div class="upper-header">
+                        <div class="contact-header">
+                            <div class="mobile">
+                                <i class="fa-solid fa-phone"></i>
+                                <span class="text">9922592844</span>
+                            </div>
+
+                            <div class="mail-header">
+                                <i class="fa-regular fa-envelope"></i>
+                                <a href="mailto:unit1hostel.chembur@gmail.com" style="text-decoration: none; color: #fff;">
+                                    unit1hostel.chembur@gmail.com
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="social-media">
+                            <a href="https://www.instagram.com/ambedkarboyshostel" target="_blank">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="main-header ">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="name-header">
+                         <img 
+                            class="logo1" 
+                            src="https://res.cloudinary.com/dmtdl93vz/image/upload/f_auto,q_auto,w_1200/v1785686373/logo_kvoece.png"
+                            alt="Bharat Ratna Dr Babasaheb Ambedkar Government Hostel Chembur Logo">
+                        <div class="hostel-name">
+                            <h4>
+                                भारत रत्न डॉ. बाबासाहेब आंबेडकर मुलांचे शासकीय वसतिगृह युनिट १, २, ३ व संत एकनाथ मागासवर्गीय मुलांचे वसतिगृह चेंबूर, मुंबई – ४०००७११
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="main-header ">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="nav-wrapper">
+                        <div class="nav-option-container">
+                            <div class="nav-option active"><a href="/home">Home</a></div>
+                            <div class="nav-option"><a href="/about-government-hostel-chembur">About</a></div>
+                            <div class="nav-option"><a href="/hostel-facilities">Facilities</a></div>
+                            <div class="nav-option"><a href="/hostel-gallery">Gallery</a></div>
+                            <div class="nav-option"><a href="/hostel-mess-menu">Mess Menu</a></div>
+                            <div class="nav-option"><a href="/government-hostel-admission">Admission</a></div>
+                            <div class="nav-option"><a href="/hostel-contact">Contacts</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</header>
+
+
+<script>
+    const navItems = document.querySelectorAll(".nav-option");
+    const navContainer = document.querySelector(".nav-option-container");
+
+    function setActiveNav() {
+        const currentPath = window.location.pathname;
+
+        navItems.forEach(item => {
+            item.classList.remove("active");
+
+            const link = item.querySelector("a").getAttribute("href");
+
+            if (link === currentPath) {
+                item.classList.add("active");
+
+                // Mobile navbar auto scroll
+                setTimeout(() => {
+                    item.scrollIntoView({
+                        behavior: "smooth",
+                        block: "nearest",
+                        inline: "center"
+                    });
+                }, 100);
+            }
+        });
+    }
+
+    // Run on page load
+    setActiveNav();
+
+    // Handle browser back/forward
+    window.addEventListener("popstate", setActiveNav);
+</script>

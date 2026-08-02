@@ -1,0 +1,362 @@
+<% layout("/layout/boilerplate.ejs") %>
+
+<!-- hostel overview -->
+<section class="hostel-overview">
+  <div class="container">
+  <% if(hostelOverview) { %>
+
+    
+    <!-- Heading -->
+    <div class="overview-header text-center">
+      <h2 class="heading"><%=hostelOverview.title%></h2>
+      <p class="sub-heading"><%=hostelOverview.subtitle%></p>
+    </div>
+
+    <!-- Content Card -->
+    <div class="overview-card">
+
+      <p>
+        <strong><%=hostelOverview.bold1%></strong> 
+        आणि <strong><%=hostelOverview.bold2%></strong>
+        <%=hostelOverview.description%>
+      </p>
+
+      <p><%=hostelOverview.para1%></p>
+
+      <p><%=hostelOverview.para2%></p>
+
+      <p><%=hostelOverview.para3%></p>
+
+    <% } %>
+    </div>
+
+      <div class="histel-capacity">
+        <h5><b>निवासी क्षमता:</b></h5>
+        <p>चारही वसतिगृहांची एकूण निवासी क्षमता<b> ९०० विद्यार्थ्यांची</b> आहे.</p>
+      </div>
+      
+      <div class="capcity-table-wrapper">
+        <table class="capacity-table">
+          <thead>
+            <tr>
+              <th>वसतिगृह</th>
+              <th>क्षमता</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>डॉ. बाबासाहेब आंबेडकर वसतिगृह - युनिट १</td>
+              <td>२५० विद्यार्थी</td>
+            </tr>
+            <tr>
+              <td>डॉ. बाबासाहेब आंबेडकर वसतिगृह - युनिट २</td>
+              <td>२५० विद्यार्थी</td>
+            </tr>
+             <tr>
+              <td>डॉ. बाबासाहेब आंबेडकर वसतिगृह - युनिट ३</td>
+              <td>२५० विद्यार्थी</td>
+            </tr>
+            <tr>
+              <td>संत एकनाथ मागासवर्गीय वसतिगृह</td>
+              <td>१५० विद्यार्थी</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td><strong>एकूण क्षमता</strong></td>
+              <td><strong>९०० विद्यार्थी</strong></td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+
+      <br>
+      <div class="hostel-reservation">
+        <h5><b>प्रवेश व आरक्षण:</b></h5>
+        <p>शासनाच्या सामाजिक न्याय व विशेष सहाय्य विभागाच्या नियमानुसार विविध आरक्षित प्रवर्गातील विद्यार्थ्यांना प्रवेश दिला जातो.</p>
+      </div>
+
+      <div class="reservation-table-wrapper">
+        <table class="reservation-table">
+          <thead>
+            <tr>
+              <th>प्रवर्ग</th>
+              <th>आरक्षण (%)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>अनुसूचित जाती (SC)</td>
+              <td>८५%</td>
+            </tr>
+
+            <tr>
+              <td>अनुसूचित जमाती (ST)</td>
+              <td>३%</td>
+            </tr>
+
+             <tr>
+              <td>विमुक्त जाती व भटक्या जमाती (VJNT)</td>
+              <td>५%</td>
+            </tr>
+
+             <tr>
+              <td>आर्थिकदृष्ट्या दुर्बल घटक व इतर मागासवर्ग (EWS / OBC)</td>
+              <td>५%</td>
+            </tr>
+
+             <tr>
+              <td>विशेष मागास प्रवर्ग (SBC)</td>
+              <td>२%</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td>एकूण</td>
+              <td>१००%</td>
+            </tr>
+          </tfoot>
+        </table>
+      </div><br>
+      
+    <h5><b>अनुसूचित जाती (SC) अंतर्गत उपविभाग:</b></h5>
+    <div class="sedulcast-table-capacity">
+      <table class="sedulcast-table">
+        <thead >
+          <tr>
+            <th>उपप्रवर्ग</th>
+            <th>टक्केवारी</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>सामान्य</td>
+            <td>७१%</td>
+          </tr>
+          <tr>
+            <td>मांग</td>
+            <td>७%</td>
+          </tr>
+          <tr>
+            <td>मेहतर</td>
+            <td>७%</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+   
+     <div class="highlight">
+      <h5><b>विशेष तरतुदी</b>:</h5>
+        <ul class="highlight-content">
+          <li>दिव्यांग विद्यार्थ्यांसाठी त्यांच्या सामाजिक आरक्षणामध्ये <b>५% समांतर आरक्षण</b> लागू आहे.</li>
+          <li>अनाथ विद्यार्थ्यांसाठी त्यांच्या सामाजिक आरक्षणामध्ये <b>१% समांतर आरक्षण</b> लागू आहे.</li>
+        </ul>
+     </div>
+
+
+
+  </div>
+    
+  
+    
+
+</section>
+
+
+
+<!-- OUR MISSION -->
+
+<section class="our-mission">
+  <div class="container">
+    <%if(ourMission) {%>
+    <!-- Heading -->
+    <div class="mission-header text-center">
+      <h2 class="heading"><%=ourMission.title%></h2>
+      <p class="sub-heading"><%=ourMission.subtitle%></p>
+    </div>
+
+    <!-- Mission Content -->
+    <div class="mission-grid">
+
+      <!-- Card 1 -->
+      <div class="mission-card">
+        <div class="mission-icon">
+          <i class="fa-solid fa-shield-halved"></i>
+        </div>
+
+        <p><%=ourMission.para1%></p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="mission-card">
+        <div class="mission-icon">
+          <i class="fa-solid fa-book-open"></i>
+        </div>
+        <p><%=ourMission.para2%></p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="mission-card">
+        <div class="mission-icon">
+          <i class="fa-solid fa-people-group"></i>
+        </div>
+        <p><%=ourMission.para3%></p>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="mission-card">
+        <div class="mission-icon">
+          <i class="fa-solid fa-globe"></i>
+        </div>
+        <p><%=ourMission.para4%></p>
+      </div>
+
+    </div>
+    <% } %>
+  </div>
+</section>
+
+
+<!-- life at hostel -->
+
+<section class="life-at-hostel">
+  <div class="container hostel-life-container">
+    <% if(lifeAtHostel) {%>
+    <!-- Heading -->
+    <div class="life-header text-center">
+      <h2><%=lifeAtHostel.title%></h2>
+      <p><%=lifeAtHostel.subtitle%></p>
+    </div>
+
+    <!-- Timeline -->
+    <div class="life-timeline">
+      
+      <% let heading = lifeAtHostel.bold1.split(","); %>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h4><%=heading[0]%></h4>
+          <p>
+            <%=lifeAtHostel.para1%>
+          </p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h4><%=heading[1]%></h4>
+          <p>
+              <%=lifeAtHostel.para2%>
+          </p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h4><%=heading[2]%></h4>
+          <p>
+             <%=lifeAtHostel.para3%>
+          </p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h4><%=heading[3]%></h4>
+          <p>
+             <%=lifeAtHostel.para4%>
+          </p>
+        </div>
+      </div>
+
+    </div>
+    <% } %>
+  </div>
+</section>
+
+
+
+
+<!-- about wbsite section -->
+
+<section class="about-website">
+  <div class="container">
+    <% if(aboutWebsite) {%> 
+    <div class="row align-items-center">
+
+      <!-- LEFT TEXT -->
+      <div class="col-md-6">
+        <h2><%=aboutWebsite.title%></h2>
+
+        <p>
+          <%=aboutWebsite.para1%> <%=aboutWebsite.para2%> <%=aboutWebsite.para3%>
+        </p>
+
+      </div>
+
+      <!-- RIGHT HIGHLIGHTS -->
+      <div class="col-md-6">
+        <div class="website-points">
+          <% let item = aboutWebsite.bold1.split(",");%>
+          <div class="point-card">
+            <i class="fa-solid fa-circle-info"></i>
+            <span><%=item[0]%></span>
+          </div>
+
+          <div class="point-card">
+            <i class="fa-solid fa-bolt"></i>
+            <span><%=item[1]%></span>
+          </div>
+
+          <div class="point-card">
+            <i class="fa-solid fa-users"></i>
+            <span><%=item[2]%></span>
+          </div>
+
+          <div class="point-card">
+            <i class="fa-solid fa-shield-halved"></i>
+            <span><%=item[3]%></span>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+    <% } %>
+  </div>
+</section>
+
+
+
+<!-- DISCLAIMER -->
+
+<section class="disclaimer-section">
+  <div class="container">
+ <% if(disclaimer) {%> 
+    <div class="disclaimer-box">
+
+      <!-- ICON + TITLE -->
+      <div class="disclaimer-header">
+
+        <h2><%=disclaimer.title%></h2>
+      </div>
+
+      <!-- CONTENT -->
+      <div class="disclaimer-content">
+
+        <ul>
+          <li><p><%=disclaimer.para1%></p></li>
+          <li><p><%=disclaimer.para2%></p></li>
+          <li><p><%=disclaimer.para3%></p></li>
+        </ul>
+        
+      </div>
+
+    </div>
+  <% } %>
+  </div>
+</section>

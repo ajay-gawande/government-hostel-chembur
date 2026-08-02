@@ -1,0 +1,278 @@
+<% layout("/layout/boilerplate.ejs") %>
+
+<section class="gallery-filetr ">
+    <div class="container">
+        <div class="filters">
+
+            <a href="/hostel-gallery"
+                class="<%= category === 'All' ? 'active' : '' %>">
+                All
+            </a>
+
+            <a href="/hostel-gallery?category=Hostel"
+                class="<%= category === 'Hostel' ? 'active' : '' %>">
+                Hostel
+            </a>
+
+            <a href="/hostel-gallery?category=Events"
+                class="<%= category === 'Events' ? 'active' : '' %>">
+                Events
+            </a>
+
+            <a href="/hostel-gallery?category=National Festivals"
+                class="<%= category === 'National Festivals' ? 'active' : '' %>">
+                National Festivals
+            </a>
+
+            <a href="/hostel-gallery?category=Sports"
+                class="<%= category === 'Sports' ? 'active' : '' %>">
+                Sports
+            </a>
+
+            <a href="/hostel-gallery?category=Mess"
+                class="<%= category === 'Mess' ? 'active' : '' %>">
+                Mess
+            </a>
+
+            <a href="/hostel-gallery?category=Study"
+                class="<%= category === 'Study' ? 'active' : '' %>">
+                Study
+            </a>
+
+            <a href="/hostel-gallery?category=Campus"
+                class="<%= category === 'Campus' ? 'active' : '' %>">
+                Campus
+            </a>
+
+            <a href="/hostel-gallery?category=Activities"
+                class="<%= category === 'Activities' ? 'active' : '' %>">
+                Activities
+            </a>
+
+        </div>
+    </div>
+</section>
+
+<section>
+
+    <div class="container">
+
+        <div class="hostel-gallery-container">
+
+            <% gallery.forEach(item=>{ %>
+
+                <% item.image.forEach((img,index)=>{ %>
+
+                    <div class="hostel-gallery-card <%= index >= 10 ? 'extra-image' : '' %>">
+
+                        <img
+                            class="hostel-gallery-image"
+                            src="<%= img.url.replace('/upload/', '/upload/f_auto,q_auto,w_800/') %>"
+                            alt="Government Hostel Chembur image" loading="lazy">
+
+                    </div>
+
+                 <% }) %>
+
+            <% }) %>
+
+        </div>
+
+
+        <% if(gallery.some(item => item.image.length > 10)){ %>
+
+            <div class="see-more-container">
+
+                <button id="seeMoreBtn">
+                    See More Images
+                </button>
+
+            </div>
+
+         <% } %>
+
+    </div>
+
+</section>
+
+<section class="memories-section">
+
+    <div class="container memorise-container">
+        <div class="memories-section-heading">
+            <i class="fa-solid fa-camera"></i>
+            <h2>अविस्मरणीय क्षण</h2>
+          
+        </div>
+
+        <div class="gallery-grid">
+
+            <!-- Large Card -->
+            <a href="#" class="memory-card large">
+
+                <img src="https://res.cloudinary.com/dmtdl93vz/image/upload/f_auto,q_auto,w_800/v1785249414/hostel/wkn69krq6809dc3rrui5.jpg" alt="Government Hostel Chembur bhim jayanti " loading="lazy">
+
+                <div class="memory-card-overlay">
+                    <h3>डॉ. बाबासाहेब आंबेडकर १३५ वी जयंती महोत्सव २०२६</h3>
+                    <p>‘जागृती’च्या सुरेल सादरीकरणातून जागर अस्मितेचा संगीत कार्यक्रम.</p>
+                </div>
+
+            </a>
+
+            <!-- Right Side -->
+
+            <div class="right-grid">
+
+                <a href="#" class="memory-card">
+
+                    <img src="https://res.cloudinary.com/dmtdl93vz/image/upload/f_auto,q_auto,w_800/v1785250301/hostel/fvkpwgl1ovbwf7ljmugp.jpg" alt="Government Hostel Chembur sport day" loading="lazy">
+
+                    <div class="memory-card-overlay">
+                        <h3>क्रीडा स्पर्धा विशेष क्षण</h3>
+                        <p>अंतरगृह क्रीडा स्पर्धा 2024</p>
+                    </div>
+
+                </a>
+
+                <a href="#" class="memory-card">
+
+                    <img src="https://res.cloudinary.com/dmtdl93vz/image/upload/f_auto,q_auto,w_800/v1785250054/hostel/cwfvfthx0pcselwchbo7.jpg" alt="Government Hostel Chembur independent day" loading="lazy">
+
+                    <div class="memory-card-overlay">
+                        <h3>स्वातंत्र्य दिन उत्सव</h3>
+                        <p>15 ऑगस्ट 2024</p>
+                    </div>
+
+                </a>
+
+                <a href="#" class="memory-card">
+
+                    <img src="https://res.cloudinary.com/dmtdl93vz/image/upload/f_auto,q_auto,w_800/v1785249505/hostel/svk7w7i3istzenlcmyxw.jpg" alt="Government Hostel Chembur clutural event" loading="lazy">
+
+                    <div class="memory-card-overlay">
+                        <h3>सांस्कृतिक कार्यक्रम</h3>
+                        <p>विद्यार्थ्यांची सहभागिता</p>
+                    </div>
+
+                </a>
+
+            </div>
+
+        </div>
+    </div>
+
+</section>
+
+
+<section class="video-gallery">
+
+    <div class="container video-gallery-container">
+
+        <div class="video-gallery-section-title">
+            <i class="fa-solid fa-video"></i>
+            <h2>व्हिडिओ गॅलरी</h2>
+        </div>
+
+        <div class="swiper videoSwiper">
+
+            <div class="swiper-wrapper">
+
+                <!-- Video 1 -->
+
+                     <div class="swiper-slide">
+                    <div class="video-card">
+                        <iframe
+                            src="https://player.cloudinary.com/embed/?cloud_name=dmtdl93vz&public_id=AQMOuwnCH0BdSFTVhcCxITQbZfJfjIT_XRIFMchyMppnfQyZaqkMrmJ-r13XMq4D8xYsrd7MZXEnSXkCVmJUYguGUV7CUdUSScT4zBw_gzbjve"
+                            allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
+                            allowfullscreen
+                            frameborder="0">
+                        </iframe>
+                        <div class="video-overlay">
+                            <h3>अंतरगृह क्रीडा स्पर्धा</h3>
+                            <p>विद्यार्थ्यांच्या उत्साह, क्रीडाभावना आणि संघभावनेची रोमांचक झलक.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video 2 -->
+                <div class="swiper-slide">
+                    <div class="video-card">
+                        <iframe
+                            src="https://player.cloudinary.com/embed/?cloud_name=dmtdl93vz&public_id=AQPrE607lKqo6lb2i0S0VisG0zsaKIgJohhanuSZ2m4-9LUgeHsveC79Dl-CnO4J5M-nF4IORXeEvDeRSGcQy4nQc0_zPmDsMS-BZV0_bmrbyd"
+                            allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
+                            
+                            frameborder="0">
+                        </iframe>
+
+                        <div class="video-overlay">
+                            <h3>डॉ. बाबासाहेब आंबेडकर १३५ वी जयंती</h3>
+                            <p>मान्यवरांच्या प्रेरणादायी मार्गदर्शनातून कार्यक्रमाची भव्य सुरुवात.</p>
+                        </div>
+                    </div>
+                </div>
+
+                
+           
+
+                <!-- Video 3 -->
+                <div class="swiper-slide">
+                    <div class="video-card">
+                        <iframe
+                            src="https://player.cloudinary.com/embed/?cloud_name=dmtdl93vz&public_id=AQMIzgYXA8eq7I1G24fxnV3EDbm3tQRlIGcoi1SchhTtFCw_rb_gbHgAuBwqhOMQ-YonMrP0t7dZjAGq0I7nCk7v_CUHei5TsU6jcIs_vzefqw"
+                            allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
+                            allowfullscreen
+                            frameborder="0"
+                        ></iframe>
+
+                        <div class="video-overlay">
+                            <h3>भीम जयंती जल्लोष २०२६</h3>
+                            <p>रात्रीच्या प्रकाशमय वातावरणात साजरा झालेला वसतिगृहातील भव्य भीम जयंती उत्सव.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video 4 -->
+                <div class="swiper-slide">
+                    <div class="video-card">
+                        <iframe
+                            src="https://player.cloudinary.com/embed/?cloud_name=dmtdl93vz&public_id=hostel%2Fw5jdcrftcgcsnrvclmza"
+                            allow="fullscreen; encrypted-media; picture-in-picture"
+                            allowfullscreen
+                            frameborder="0">
+                        </iframe>
+                        <div class="video-overlay">
+                            <h3>फक्त वाचून नाही... नाचूनसुद्धा!</h3>
+                            <p>भीम जयंतीचा जल्लोष, उत्साह आणि आनंद.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video 5 -->
+                <div class="swiper-slide">
+                    <div class="video-card">
+                        <iframe src="https://www.youtube.com/embed/ZENXO1sjK6o"
+                            allowfullscreen></iframe>
+
+                        <div class="video-overlay">
+                            <h3>‘जागर अस्मितीचा’ संगीत कार्यक्रम</h3>
+                            <p>प्रबोधन, सामाजिक परिवर्तन आणि समतेचा संदेश देणारे प्रेरणादायी सादरीकरण.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="swiper-pagination"></div>
+
+            <button class="event-btn prev">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+
+            <button class="event-btn next">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+
+        </div>
+
+    </div>
+
+</section>

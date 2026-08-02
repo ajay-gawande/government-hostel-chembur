@@ -1,0 +1,35 @@
+<% layout('layout/admin') %>
+<h2>Add New Image</h2><br>
+<form action="/admin/gallery" method="POST" enctype="multipart/form-data">
+    <select name="category" required >
+        <option>Select Category</option>
+        <option value="All">All</option>
+        <option value="Hostel">Hostel</option>
+        <option value="Events">Event</option>
+        <option value="National Festivals">Nation Fastivals</option>
+        <option value="Sports">Sports</option>
+        <option value="Mess">Mess</option>
+        <option value="Study">Study</option>
+        <option value="Campus">Campus</option>
+        <option value="Activity">Activies</option>
+    </select>
+
+    <br><br>
+    <label for="title">Title</label>
+    <input type="text" name="title">
+
+    <br><br>
+
+    <label for="discription">Discription:</label>
+    <textarea type="text" name="discription" cols="50" ></textarea>
+
+    <br><br>
+
+    <label for="upload image">Upload Image:</label>
+    <input type="file" name="image" multiple>
+
+     <br><br>
+
+     <button type="submit">Add Gallery</button>
+
+</form>

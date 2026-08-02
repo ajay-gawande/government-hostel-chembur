@@ -1,0 +1,54 @@
+<% layout('layout/admin') %>
+
+<h2>Edit Section</h2>
+
+<form action="/admin/edit/<%= section._id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+
+  <input type="text" name="title" value="<%= section.title %>" placeholder="Title"><br>
+
+  <input type="text" name="subtitle" value="<%= section.subtitle %>" placeholder="Subtitle"><br>
+
+  <textarea name="description"><%= section.description %></textarea><br>
+
+  <textarea name="para1"><%= section.para1 %></textarea><br>
+  <textarea name="para2"><%= section.para2 %></textarea><br>
+  <textarea name="para3"><%= section.para3 %></textarea><br>
+  <textarea name="para4"><%= section.para4 %></textarea><br>
+
+  <textarea name="bold1"><%= section.bold1 %></textarea><br>
+  <textarea name="bold2"><%= section.bold2 %></textarea><br>
+
+  <input type="text" name="flag" value="<%= section.flag %>" placeholder="flag"><br>
+
+
+  <input type="file" name="media" multiple><br><br>
+
+  <button type="submit">Update</button>
+
+</form>
+
+<hr>
+
+<h3>Existing Media</h3>
+<div class="existing-media">
+<% if (section.media && section.media.length > 0) { %>
+  <% section.media.forEach((file, index) => { %>
+
+    <div style="margin-bottom:15px;">
+      
+      <% if (file.type === "image") { %>
+        <img src="<%= file.url %>" width="150" height="100">
+      <% } else { %>
+        <video src="<%= file.url %>" width="150" controls></video>
+      <% } %>
+
+      <!-- DELETE BUTTON -->
+      <form action="/admin/delete-media/<%= section._id %>/<%= index %>?_method=DELETE" method="POST">
+        <button type="submit">Delete</button>
+      </form>
+
+    </div>
+
+  <% }) %>
+<% } %>
+</div>

@@ -1,0 +1,56 @@
+<% layout('layout/admin') %>
+
+
+  <!-- ADD BUTTON -->
+ <div class="top-bar">
+  <h2 class="page-title">Developer Details</h2>
+  <a href="/admin/developer/add" class="btn-add">+ Add Developer</a>
+</div>
+<div class="admin-container">
+
+
+
+  <!-- TABLE -->
+  <table class="contact-table">
+    <thead>
+      <tr>
+        <th>Profile</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Links</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% developers.forEach(dev => { %>
+        <tr>
+          <td>
+            <% if(dev.image && dev.image.url) { %>
+              <img src="<%= dev.image.url %>" width="60" style="border-radius:50%">
+            <% } else { %>
+              No Image
+            <% } %>
+          </td>
+          <td><%= dev.name %></td>
+          <td><%= dev.email %></td>
+
+          <td>
+            <% if(dev.whatsapp){ %> 📱 <% } %>
+            <% if(dev.instagram){ %> 📸 <% } %>
+            <% if(dev.linkedin){ %> 💼 <% } %>
+          </td>
+
+          <td>
+            <a href="/admin/developer/edit/<%= dev._id %>" class="edit-btn">Edit</a>
+
+            <form action="/admin/developer/delete/<%= dev._id %>?_method=DELETE" method="POST" style="display:inline;">
+              <button class="delete-btn">Delete</button>
+            </form>
+          </td>
+        </tr>
+      <% }) %>
+    </tbody>
+  </table>
+
+</div>
