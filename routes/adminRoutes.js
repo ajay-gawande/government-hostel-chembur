@@ -13,7 +13,7 @@ router.use((req, res, next) => {
   next();
 });
 
-const validPages = [
+const validPages = [ 
   "home",
   "about",
   "facilities",

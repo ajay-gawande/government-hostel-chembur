@@ -17,4 +17,4 @@ router.get("/government-hostel-admission",clientController.getadmission);
 router.get("/hostel-gallery",clientController.getGallery);
 
 
-module.exports = router;
+module.exports = router; 

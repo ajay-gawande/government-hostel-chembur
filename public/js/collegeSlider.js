@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
     track.style.transform = `translateX(-${index * (100 / visible)}%)`;
 
     if (index >= total) {
-      setTimeout(() => {
+      setTimeout(() => { 
         track.style.transition = "none";
         index = 0;
         track.style.transform = `translateX(0)`;

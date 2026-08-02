@@ -12,7 +12,7 @@ module.exports.getHome = async (req, res) => {
 
   const about = await Section.findOne({
     page:"home",
-    section:"about"
+    section:"about" 
   });
 
   const studentGallery = await Section.findOne({
