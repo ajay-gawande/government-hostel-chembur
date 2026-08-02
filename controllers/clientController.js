@@ -1,6 +1,7 @@
 const Section = require("../models/Section");
 const Developer = require("../models/developer");
 const Gallery = require("../models/Gallery");
+const Contact = require("../models/contact");
 
 
 // home route
@@ -293,3 +294,47 @@ module.exports.getContact = async(req,res) =>{
 
   });
 }
+
+
+// save contact  
+
+module.exports.saveContact = async (req, res) => {
+
+  try {
+
+    const { name, email, subject, message } = req.body;
+
+
+    if (!name || !email || !message) {
+      req.flash("error", "Please fill all required fields");
+      return res.redirect("/");
+    }
+
+
+    const newContact = new Contact({
+      name,
+      email,
+      subject,
+      message
+    });
+
+
+    await newContact.save();
+
+
+    req.flash("success", "Message sent successfully!");
+
+    res.redirect("/home");
+
+
+  } catch (err) {
+
+    console.log(err);
+
+    req.flash("error", "Something went wrong!");
+
+    res.redirect("/hostel-contact");
+
+  }
+
+};

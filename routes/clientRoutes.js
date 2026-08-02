@@ -16,5 +16,7 @@ router.get("/government-hostel-admission",clientController.getadmission);
 
 router.get("/hostel-gallery",clientController.getGallery);
 
+router.post("/contact-message", clientController.saveContact);
+
 
 module.exports = router; 
