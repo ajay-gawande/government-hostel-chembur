@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 const clientController = require("../controllers/clientController");
 
+router.get("/", clientController.getHome);
 router.get("/home", clientController.getHome);
 
 router.get("/about-government-hostel-chembur",clientController.getAbout);
