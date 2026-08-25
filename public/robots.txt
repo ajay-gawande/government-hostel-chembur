@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://government-hostel-chembur.onrender.com/sitemap.xml
