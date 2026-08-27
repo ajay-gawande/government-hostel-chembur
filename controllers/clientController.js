@@ -85,7 +85,7 @@ const galleryImages = await Section.findOne({
 
 
 
-  res.render("client/index.ejs", { 
+res.render("client/index.ejs", { 
     hero, 
     about, 
     studentGallery, 
@@ -99,11 +99,11 @@ const galleryImages = await Section.findOne({
     dhammachakarEvent,
     developer,
     galleryImages,
-    title:"Dr. Babasaheb Ambedkar Boys Hostel, Chembur mumbai | Student Portal",
-    description:"Explore admission information, hostel facilities, mess menu, events, notices, gallery, and student services of Dr. Babasaheb Ambedkar Boys Government Hostel, Chembur mumbai."
 
-  
-  });
+    title: "Dr. Babasaheb Ambedkar Boys Government Hostel Chembur, Mumbai",
+
+    description: "Dr. Babasaheb Ambedkar Boys Government Hostel Chembur, Mumbai offers hostel accommodation, facilities, mess services, notices, events, gallery and student information."
+});
 
 
 };
